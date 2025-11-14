@@ -4,13 +4,13 @@
 
 # Sistema de Automatización de Lecturas de Servicios Públicos
 
-## 💡 Descripción general
+## Descripción general
 Solución tecnológica para la **automatización de los datos de los contadores** que realizan la lectura y medición de los servicios de agua, luz y gas.  
 El sistema permite registrar contadores, registrar lecturas, listar las lecturas realizadas y calcular el costo del consumo según el tipo de servicio.
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 Desarrollar un sistema básico en **Java** que demuestre los principios de la **Programación Orientada a Objetos (POO)**:
 
 - **Abstracción:** Clase abstracta `Servicio`.
@@ -58,14 +58,14 @@ El sistema ahora puede registrar contadores y lecturas de forma básica usando c
 
 ---
 
-## 🎯 Objetivos
+## Objetivos
 - Aplicar **encapsulación, constructores, getters/setters y listas**.
 - Implementar la relación entre `Contador` y `Lectura`.
 - Simular el registro de datos sin base de datos (colecciones en memoria).
 
 ---
 
-## 🧩 Estructura del proyecto
+## Estructura del proyecto
 
 proyectoPOO/
 └── src/
@@ -81,7 +81,7 @@ proyectoPOO/
 
 ---
 
-## ⚡ **ENTREGA 3 — Herencia, Polimorfismo y Cálculo de Costos**
+## **ENTREGA 3 — Herencia, Polimorfismo y Cálculo de Costos**
 
 # ENTREGABLE 3 — Herencia, Polimorfismo y Cálculo de Consumo
 
@@ -93,14 +93,14 @@ Cada una implementa su propio método para calcular el costo del consumo.
 
 ---
 
-## 🎯 Objetivos
+## Objetivos
 - Aplicar **herencia y polimorfismo**.
 - Simular la lectura y cálculo del costo según tipo de servicio.
 - Consolidar la arquitectura modular y extensible del sistema.
 
 ---
 
-## 🧩 Estructura del proyecto
+## Estructura del proyecto
 
 proyectoPOO/
 └── src/
@@ -118,7 +118,7 @@ proyectoPOO/
 
 ---
 
-## 🧠 Conceptos aplicados
+## Conceptos aplicados
 
 -Herencia: clases específicas derivadas de una clase base abstracta.
 
