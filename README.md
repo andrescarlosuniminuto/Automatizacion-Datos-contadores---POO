@@ -4,126 +4,46 @@
 
 # Sistema de Automatización de Lecturas de Servicios Públicos
 
-## Descripción general
-Solución tecnológica para la **automatización de los datos de los contadores** que realizan la lectura y medición de los servicios de agua, luz y gas.  
-El sistema permite registrar contadores, registrar lecturas, listar las lecturas realizadas y calcular el costo del consumo según el tipo de servicio.
+
+## Descripción del Proyecto
+Este proyecto implementa un sistema básico para la **automatización de los datos de contadores** de agua, luz y gas.  
+Permite registrar contadores, registrar lecturas, listar los registros y calcular costos según el tipo de servicio.
+
+El sistema se diseñó siguiendo estrictamente los principios de **Programación Orientada a Objetos (POO)**, aplicando herencia, abstracción, encapsulación, polimorfismo y composición de forma clara y demostrable.
 
 ---
 
-## Objetivo
-Desarrollar un sistema básico en **Java** que demuestre los principios de la **Programación Orientada a Objetos (POO)**:
+## Funcionalidades Principales
 
-- **Abstracción:** Clase abstracta `Servicio`.
-- **Encapsulamiento:** Atributos privados y métodos getters/setters.
-- **Herencia:** `ServicioAgua`, `ServicioLuz`, `ServicioGas` heredan de `Servicio`.
-- **Polimorfismo:** Cada tipo de servicio implementa su propio cálculo de consumo.
-- **Asociación y composición:** `Contador` tiene muchas `Lectura`; `SistemaLecturas` administra colecciones.
-
-proyectoPOO/
- └── src/
-      └── sistema/
-           ├── Main.java
-           └── services/
-                └── SistemaLecturas.java
-
+- Registro de contadores (agua, luz, gas).  
+- Registro de lecturas de consumo.
+- Listado de lecturas registradas.
+- Cálculo automático del costo según el tipo de servicio.
+- Menú interactivo en consola para navegación del usuario.
 
 ---
 
-# ENTREGABLE 1 — Estructura Base del Sistema
+## Arquitectura y POO Implementados
 
-## Descripción
-Se crea el esqueleto del sistema de automatización de lecturas de contadores.  
-Esta primera versión no almacena datos reales, pero define la estructura modular del proyecto.
+### ✔ Encapsulación
+Todos los atributos de las clases `Contador` y `Lectura` son privados y se accede a ellos mediante **getters** y **setters**, protegiendo la integridad de los datos.
 
-## Objetivos
-- Aplicar conceptos de encapsulación básica.
-- Separar responsabilidades entre la clase `Main` y el servicio `SistemaLecturas`.
-- Construir un menú navegable que represente las futuras funcionalidades.
+### ✔ Abstracción
+La clase abstracta `Servicio` representa un servicio público genérico.  
+Define el método abstracto `calcularCosto()` que cada servicio concreto implementa.
 
-## Estado del Sistema
-- El menú muestra opciones para registrar contadores, registrar lecturas, listar lecturas y calcular costos.
-- Las funciones solo imprimen mensajes de depuración.
+### ✔ Herencia
+Las clases:
+- `ServicioAgua`
+- `ServicioLuz`
+- `ServicioGas`
 
---- 
+Heredan de `Servicio` y cada una implementa su propia fórmula de cálculo.
 
-# ENTREGABLE 2 — Implementación de Clases y Lógica Básica
+### ✔ Polimorfismo
+Los métodos se invocan sin importar la clase hija específica del servicio.  
+Ejemplo:
 
-## Descripción
-En esta segunda entrega se implementan las **clases de dominio** del sistema:
-- `Contador` (representa el medidor de un servicio).
-- `Lectura` (representa una medición realizada por un contador).
-- Se agregan estructuras para **almacenar y gestionar** los datos en memoria desde `SistemaLecturas`.
+```java
+double costo = contador.getServicio().calcularCosto(consumo);
 
-El sistema ahora puede registrar contadores y lecturas de forma básica usando colecciones.
-
----
-
-## Objetivos
-- Aplicar **encapsulación, constructores, getters/setters y listas**.
-- Implementar la relación entre `Contador` y `Lectura`.
-- Simular el registro de datos sin base de datos (colecciones en memoria).
-
----
-
-## Estructura del proyecto
-
-proyectoPOO/
-└── src/
-└── sistema/
-├── Main.java
-├── models/
-│ ├── Contador.java
-│ └── Lectura.java
-└── services/
-└── SistemaLecturas.java
-
----
-
----
-
-## **ENTREGA 3 — Herencia, Polimorfismo y Cálculo de Costos**
-
-# ENTREGABLE 3 — Herencia, Polimorfismo y Cálculo de Consumo
-
-## Descripción
-En esta fase final, el sistema diferencia los tipos de contadores mediante herencia:
-- Clase base `Contador`.
-- Clases hijas: `ContadorAgua`, `ContadorLuz` y `ContadorGas`.
-Cada una implementa su propio método para calcular el costo del consumo.
-
----
-
-## Objetivos
-- Aplicar **herencia y polimorfismo**.
-- Simular la lectura y cálculo del costo según tipo de servicio.
-- Consolidar la arquitectura modular y extensible del sistema.
-
----
-
-## Estructura del proyecto
-
-proyectoPOO/
-└── src/
-└── sistema/
-├── Main.java
-├── models/
-│ ├── Contador.java
-│ ├── ContadorAgua.java
-│ ├── ContadorLuz.java
-│ ├── ContadorGas.java
-│ └── Lectura.java
-└── services/
-└── SistemaLecturas.java
-
-
----
-
-## Conceptos aplicados
-
--Herencia: clases específicas derivadas de una clase base abstracta.
-
--Polimorfismo: uso dinámico del método calcularCosto() según tipo de contador.
-
--Colecciones y búsqueda (stream, filter).
-
--Diseño modular y extensible.
