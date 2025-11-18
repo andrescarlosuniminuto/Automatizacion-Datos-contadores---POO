@@ -1,0 +1,81 @@
+ aplicación
+
+CREAR clase abstracta Contador
+    DEFINIR atributos id y direccion
+    DEFINIR constructor que reciba id y direccion
+    DEFINIR método getId que retorne id
+    DEFINIR método getDireccion que retorne direccion
+    DEFINIR método abstracto calcularCosto(consumo)
+    DEFINIR método abstracto getTipo()
+    DEFINIR método toString para mostrar tipo, id y dirección
+
+CREAR clase ContadorAgua que hereda de Contador
+    DEFINIR constructor que reciba id y direccion y llame al constructor padre
+    IMPLEMENTAR calcularCosto multiplicando consumo por 1200
+    IMPLEMENTAR getTipo retornando "Agua"
+
+CREAR clase ContadorGas que hereda de Contador
+    DEFINIR constructor que reciba id y direccion y llame al constructor padre
+    IMPLEMENTAR calcularCosto multiplicando consumo por 1000
+    IMPLEMENTAR getTipo retornando "Gas"
+
+CREAR clase ContadorLuz que hereda de Contador
+    DEFINIR constructor que reciba id y direccion y llame al constructor padre
+    IMPLEMENTAR calcularCosto multiplicando consumo por 800
+    IMPLEMENTAR getTipo retornando "Luz"
+
+CREAR clase Lectura
+    DEFINIR atributos idContador, valor, fecha
+    DEFINIR constructor que reciba idContador, valor y fecha
+    DEFINIR método getIdContador que retorne idContador
+    DEFINIR método getValor que retorne valor
+    DEFINIR método getFecha que retorne fecha
+    DEFINIR método toString para mostrar contador, valor y fecha
+
+INICIAR sistema para los usuarios
+
+MOSTRAR al usuario un menú con opciones:
+    1. Registrar contador
+    2. Registrar lectura
+    3. Calcular costo de consumo
+    4. Mostrar información registrada
+    5. Salir
+
+SI el usuario elige registrar contador
+    PEDIR tipo de contador: Agua, Gas o Luz
+    PEDIR id del contador
+    PEDIR dirección del contador
+    CREAR un contador del tipo seleccionado usando el id y la dirección
+    GUARDAR el contador en la lista de contadores
+    MOSTRAR mensaje de confirmación
+
+SI el usuario elige registrar una lectura
+    PEDIR id del contador al que pertenece la lectura
+    VERIFICAR si el contador existe
+    SI no existe
+        MOSTRAR mensaje de error
+    SI existe
+        PEDIR valor de lectura
+        PEDIR fecha de la lectura
+        CREAR objeto Lectura con los datos ingresados
+        GUARDAR la lectura en la lista de lecturas
+        MOSTRAR mensaje de confirmación
+
+SI el usuario elige calcular costo
+    PEDIR id del contador
+    BUSCAR el contador en la lista
+    SI no existe
+        MOSTRAR mensaje de error
+    SI existe
+        PEDIR consumo en unidades
+        LLAMAR al método calcularCosto(consumo) del contador encontrado
+        MOSTRAR el costo calculado según el tipo de contador
+
+SI el usuario elige mostrar información
+    MOSTRAR todos los contadores registrados
+    MOSTRAR todas las lecturas registradas
+
+SI el usuario elige salir
+    CERRAR aplicación
+
+FINALIZAR sistema
