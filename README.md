@@ -1,4 +1,4 @@
-# Automatizaci-n-Datos-contadores---POO
+# Automatizacion Datos contadores POO
 
 #Proyecto 3
 
@@ -25,14 +25,14 @@ El sistema se diseñó siguiendo estrictamente los principios de **Programación
 
 ## Arquitectura y POO Implementados
 
-### ✔ Encapsulación
+### Encapsulación
 Todos los atributos de las clases `Contador` y `Lectura` son privados y se accede a ellos mediante **getters** y **setters**, protegiendo la integridad de los datos.
 
-### ✔ Abstracción
+### Abstracción
 La clase abstracta `Servicio` representa un servicio público genérico.  
 Define el método abstracto `calcularCosto()` que cada servicio concreto implementa.
 
-### ✔ Herencia
+### Herencia
 Las clases:
 - `ServicioAgua`
 - `ServicioLuz`
@@ -40,7 +40,7 @@ Las clases:
 
 Heredan de `Servicio` y cada una implementa su propia fórmula de cálculo.
 
-### ✔ Polimorfismo
+### Polimorfismo
 Los métodos se invocan sin importar la clase hija específica del servicio.  
 Ejemplo:
 
