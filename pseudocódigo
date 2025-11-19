@@ -1,6 +1,6 @@
-aplicación
+aplicación automatizacion 
 
-CREAR clase abstracta Contador
+CREAR una clase abstracta Contador
     DEFINIR atributos id y direccion
     DEFINIR constructor que reciba id y direccion
     DEFINIR método getId que retorne id
@@ -34,12 +34,13 @@ CREAR clase Lectura
 
 INICIAR sistema para los usuarios
 
-MOSTRAR al usuario un menú con opciones:
+MOSTRAR al usuario un menú con opciones que puede seleccionar:
     1. Registrar contador
     2. Registrar lectura
     3. Calcular costo de consumo
     4. Mostrar información registrada
     5. Salir
+
 
 SI el usuario elige registrar contador
     PEDIR tipo de contador: Agua, Gas o Luz
@@ -75,7 +76,7 @@ SI el usuario elige mostrar información
     MOSTRAR todos los contadores registrados
     MOSTRAR todas las lecturas registradas
 
-SI el usuario elige salir
+SI el usuario elige salir 
     CERRAR aplicación
 
 FINALIZAR sistema
