@@ -14,6 +14,7 @@ public abstract class Contador {
 // Dirección física donde está ubicado el contador
     protected String direccion;
 
+    
 /**
      * Constructor que inicializa los datos básicos del contador.
      *
